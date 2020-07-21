@@ -9,6 +9,6 @@ spec:
     task: task4
   type: NodePort
   ports:
-    - nodePort: 31111
+    - nodePort: 31113
       port: 81
       targetPort: 80  
