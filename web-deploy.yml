@@ -1,0 +1,21 @@
+  
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: task4-web-deploy
+  labels:
+    task: task4
+spec: 
+  replicas: 2
+  selector:
+    matchLabels:
+      task: task4
+  template:
+    metadata:
+      name: myweb-pod
+      labels:
+        task: task4
+    spec:
+      containers: 
+        - name: myweb
+          image: tanuj5/php-jenkins:latest
